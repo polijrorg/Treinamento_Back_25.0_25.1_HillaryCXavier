@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line import/no-unresolved
-import Product from '../models/Product';
+import Product from '../models/Products';
 
 interface ICreateHeroDTO {
   id: string;

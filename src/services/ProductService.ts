@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { randomUUID } from 'crypto';
 
-import Product from '../models/Product';
+import Product from '../models/Products';
 import ProductRepository from '../repositories/ProductRepository';
 
 class ProductService {

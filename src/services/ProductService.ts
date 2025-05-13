@@ -8,13 +8,11 @@ class ProductService {
   private repository: ProductRepository;
 
   constructor() {
-    
     this.repository = new ProductRepository();
   }
 
- 
   public create(email: string, senha: string): Product {
-    const id = randomUUID(); 
+    const id = randomUUID();
 
     const product = this.repository.create({
       id,
@@ -25,17 +23,14 @@ class ProductService {
     return product;
   }
 
-  
   public listAll(): Product[] {
     return this.repository.getAll();
   }
 
-  
   public findById(id: string): Product | undefined {
     return this.repository.getById(id);
   }
 
- 
   public update(id: string, email: string, senha: string): Product | null {
     const existingProduct = this.repository.getById(id);
 
@@ -47,7 +42,6 @@ class ProductService {
     });
   }
 
-  
   public delete(id: string): boolean {
     const index = this.repository.findIndexById(id);
 

@@ -4,8 +4,6 @@ import ProductService from '../services/ProductService';
 
 const productsRouter = Router();
 
-
-
 productsRouter.post('/', (req, res) => {
   const { email, senha } = req.body;
 
@@ -19,13 +17,10 @@ productsRouter.post('/', (req, res) => {
   return res.status(201).json(product);
 });
 
-
-
 productsRouter.get('/', (req, res) => {
   const products = ProductService.listAll();
   return res.json(products);
 });
-
 
 productsRouter.get('/:id', (req, res) => {
   const product = ProductService.findById(req.params.id);
@@ -36,8 +31,6 @@ productsRouter.get('/:id', (req, res) => {
 
   return res.json(product);
 });
-
-
 
 productsRouter.put('/:id', (req, res) => {
   const { email, senha } = req.body;
@@ -57,8 +50,6 @@ productsRouter.put('/:id', (req, res) => {
   return res.json(updatedProduct);
 });
 
-
-
 productsRouter.delete('/:id', (req, res) => {
   const deleted = ProductService.delete(req.params.id);
 
@@ -66,7 +57,7 @@ productsRouter.delete('/:id', (req, res) => {
     return res.status(404).json({ message: 'Usuário não encontrado' });
   }
 
-  return res.status(204).send(); 
+  return res.status(204).send();
 });
 
 export default productsRouter;

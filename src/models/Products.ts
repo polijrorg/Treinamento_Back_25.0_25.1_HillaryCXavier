@@ -1,9 +1,8 @@
 class Product {
-  id: string; 
-  email: string; 
-  senha : string; 
+  id: string;
+  email: string;
+  senha: string;
 
-  
   constructor(id: string, email: string, senha: string) {
     this.id = id;
     this.email = email;
